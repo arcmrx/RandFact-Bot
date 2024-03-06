@@ -23,10 +23,6 @@ def start(message):
     bot.send_message(message.chat.id, mess, parse_mode='html', reply_markup=markup)    
     bot.register_next_step_handler(message, on_click)
 
-@bot.message_handler(commands=['stp'])
-def stop_command(message):
-	bot.stop_polling()
-
 def on_click(message):    
     if message.text == 'ФАКТ🔎':
         bot.send_message(message.chat.id, funfuct())        
