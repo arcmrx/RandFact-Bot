@@ -5,7 +5,7 @@ from telebot import types
 from settings import TG_TOKEN
 
 def funfuct():    
-    inner_html_code = str(urlopen('https://randstuff.ru/fact/').read(), 'utf-8')
+    inner_html_code = str(urlopen('https://randstuff.ru/fact/').read(), 'utf-8') 
     inner_soup = BeautifulSoup(inner_html_code, "html.parser")    
     inner_soup = inner_soup.find('table', {"class": 'text'})
     fact = inner_soup.get_text()    
